@@ -34,7 +34,7 @@
       "type": "decimal"
     },
     "image": {
-      "type": "string"
+      "type": "text"
     },
     "isDeleted": {
       "type": "boolean"
