@@ -458,6 +458,7 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
 export interface ApiOrderOrder extends Struct.CollectionTypeSchema {
   collectionName: 'orders';
   info: {
+    description: '';
     displayName: 'Order';
     pluralName: 'orders';
     singularName: 'order';
@@ -475,6 +476,7 @@ export interface ApiOrderOrder extends Struct.CollectionTypeSchema {
     products: Schema.Attribute.Relation<'oneToMany', 'api::product.product'>;
     profile: Schema.Attribute.Relation<'oneToOne', 'api::profile.profile'>;
     publishedAt: Schema.Attribute.DateTime;
+    quantity: Schema.Attribute.Text;
     statusBar: Schema.Attribute.Enumeration<
       ['Pending', 'Delivered', 'Cancelled']
     >;
